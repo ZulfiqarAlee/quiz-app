@@ -1,39 +1,46 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Gilroy;
 }
-body{
+
+body {
     width: 100%;
     height: 100vh;
-    background-color: linear-gredient(to right bottom, #fff777,#fcee30);
+    background-color: linear-gredient(to right bottom, #fff777, #fcee30);
     color: black;
-    display:grid; 
-     place-items:center;                                                                                  
+    display: grid;
+    place-items: center;
 }
-.container{
+
+.container {
     width: 80%;
     max-width: 850px;
     padding: 30px;
     text-align: center;
+    display: none;
 
 }
-.container h1{
+
+.container h1 {
     font-size: 40px;
     margin-bottom: 40px;
-    
+
 }
-.container .question{
+
+.container .question {
     font-size: 26px;
     margin-top: 20px;
 
 }
-.container .choices{
+
+.container .choices {
     margin-top: 20px;
 
 }
-.choice{
+
+.choice {
     font-size: 20px;
     background-color: blue;
     margin: 10px auto;
@@ -44,10 +51,12 @@ body{
     width: 60%;
     cursor: pointer;
 }
-.choice:hover{
+
+.choice:hover {
     background-color: #4c4cc0;
 }
-.btn{
+
+.btn {
     width: 60%;
     font-size: 20px;
     padding: 12px 20px;
@@ -61,14 +70,92 @@ body{
     color: #fff;
 
 }
-.btn:hover{
-background: yellowgreen;
+
+.btn:hover {
+    background: yellowgreen;
 }
-.choice.selected{
+
+.choice.selected {
     background-color: red;
-    color:White;
+    color: White;
 }
-.scoreCard{
+
+.scoreCard {
     font-size: 24px;
     margin-top: 20px;
+}
+
+/* ====================.startBtn================= */
+.startBtn {
+    width: 15vw;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+/* ===================Timer==================== */
+.timer {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: fuchsia;
+    box-shadow: 0 2px 5px 1px rgba(64, 60, 67, .16);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid orange;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+@media (max-width: 588px) {
+    .timer {
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        right: 20px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .timer {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        font-size: 15px;
+        right: 20px;
+        top: 20px;
+    }
+
+    .container .question {
+        font-size: 15px;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .startBtn {
+        width: 80%;
+        object-fit: cover;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .choice {
+        font-size: 15px;
+        background-color: blue;
+        margin: 10px auto;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: left;
+        width: 100%;
+        overflow: hidden;
+    }
 }
